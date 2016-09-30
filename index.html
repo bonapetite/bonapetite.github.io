@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<!--div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div-->
+
+<div class="container">
+    
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                {% for post in site.posts %}
+                <div class="post-preview">
+                    <a href="{{ post.url | prepend: site.baseurl }}">
+                        <h2 class="post-title">
+                            {{ post.title }}
+                        </h2>
+
+                    </a>
+                    <p class="post-meta">Posted on {{ post.date | date: '%B %d, %Y' }}</p>
+                </div>
+                <hr>
+                {% endfor %}
+                <!-- Pager -->
+                <!--ul class="pager">
+                    <li class="next">
+                        <a href="#">Older Posts &rarr;</a>
+                    </li>
+                </ul-->
+            </div>
+        </div>
+    </div>
